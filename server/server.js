@@ -29,7 +29,7 @@ app.get('/',(req,res)=>{
     res.send("Server is live")
 })
 
-app.use(requireAuth())
+//app.use(requireAuth())
 
 app.use('/api/ai',aiRouter)
 app.use('/api/user',userRouter)
