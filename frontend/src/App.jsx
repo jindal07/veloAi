@@ -10,12 +10,19 @@ import RemoveBackground from "./pages/RemoveBackground";
 import RemoveObject from "./pages/RemoveObject";
 import ReviewResume from "./pages/ReviewResume";
 import WriteArticle from "./pages/WriteArticle";
+import { useAuth } from "@clerk/clerk-react";
+import { useEffect } from "react";
+import {Toaster} from 'react-hot-toast'
+
+
+
 function App() {
+
   return (
     <div>
+      <Toaster/>
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/ai" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="blog-titles" element={<BlogTitles />} />

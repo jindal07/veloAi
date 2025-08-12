@@ -133,7 +133,7 @@ function Sidebar({ sidebar, setSideBar }) {
           <div>
             <h1 className="text-sm font-medium">{user.fullName}</h1>
             <p className="text-xs text-gray-500">
-                <Protect plan='Premium' fallback='Free'>Premium</Protect>
+                <Protect plan='premium' fallback='free'>Premium </Protect>
                 Plan
             </p>
           </div>
