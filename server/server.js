@@ -10,14 +10,17 @@ const app= express();
 
 await connectCloundinary();
 
-app.use(cors(
-   { origin:[
-        'https://vello-ai.vercel.app',
+app.use(cors({
+    origin: [
+        'https://vello-ai.vercel.app', 
+        'https://velo-ai-server.vercel.app', 
         'http://localhost:3000',
         'http://localhost:5173',
     ],
-    credentials:true,}
-));
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key'], 
+}));
 app.use(express.json());
 app.use(clerkMiddleware());
 
