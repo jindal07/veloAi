@@ -12,8 +12,7 @@ await connectCloundinary();
 
 app.use(cors({
     origin: [
-        'https://vello-ai.vercel.app', 
-        'https://velo-ai-server.vercel.app', 
+        'https://vello-ai.vercel.app',
         'http://localhost:3000',
         'http://localhost:5173',
     ],
